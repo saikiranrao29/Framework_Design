@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-24T12:26:22 IST" name="Default suite" finished-at="2025-02-24T12:26:36 IST" duration-ms="13852">
+    <groups>
+    </groups>
+    <test started-at="2025-02-24T12:26:22 IST" name="Default test" finished-at="2025-02-24T12:26:36 IST" duration-ms="13852">
+      <class name="API_Demos_App.eCommerse_tc_1">
+        <test-method signature="addToCart(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:API_Demos_App.eCommerse_tc_1@15eb5ee5]" started-at="2025-02-24T12:26:22 IST" name="addToCart" data-provider="APIDemoTestData" finished-at="2025-02-24T12:26:36 IST" duration-ms="13835" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Argentina]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sai Kiran Rao]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Female]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+      </class> <!-- API_Demos_App.eCommerse_tc_1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

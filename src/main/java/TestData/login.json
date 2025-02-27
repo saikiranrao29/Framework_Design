@@ -1,0 +1,13 @@
+[
+		{"username":"saikiranone@dcwvalidation",
+		 "password": "xyz@1234"},
+		 
+		{"username":"saikirantwo@dcwvalidation",
+		 "password": "abc@1234"},
+		 
+		{"username":"saikiranthree@dcwvalidation",
+		 "password": "ABC@1234"},
+		 
+		{"username":"saikiranfour@dcwvalidation",
+		 "password": "XYZ@1234"}
+]
