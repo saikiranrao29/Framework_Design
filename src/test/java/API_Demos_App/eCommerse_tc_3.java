@@ -1,6 +1,8 @@
 package API_Demos_App; 
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -8,22 +10,17 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
-import pageFactoryElements.FormPage;
 
-public class eCommerse_tc_3 extends baseTest{
+public class eCommerse_tc_3 extends BaseTests.Android_BaseTest{
 	@Test
 	public static void productPrice() throws InterruptedException {
 		
-		FormPage loginscreen=new FormPage();
-		loginscreen.CountryDropDown(driver);
-
+		//PO_API_Demos_Android loginscreen=new OR_Android_ObjectsRepository.PO_API_Demos_Android(driver);
 		String stext="Argentina";
-		scrolltotext(stext);
+		Utils.Android_GestureActions gesture = new Utils.Android_GestureActions(driver);
+		gesture.scrolltotext(stext);
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Argentina']")).click();
 		
 		driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Sai Kiran Rao");
@@ -41,8 +38,8 @@ public class eCommerse_tc_3 extends baseTest{
 		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.attributeContains(driver.findElement(By.id("com.androidsample.generalstore:id/toolbar_title")), "text", "Cart"));
 		
-		Assert.assertEquals(Price1, driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(0).getText());
-		Assert.assertEquals(Price2, driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(1).getText());
+		AssertJUnit.assertEquals(Price1, driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(0).getText());
+		AssertJUnit.assertEquals(Price2, driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(1).getText());
 		
 		int productSize = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).size();
 		System.out.println(productSize);
@@ -61,10 +58,10 @@ public class eCommerse_tc_3 extends baseTest{
 		
 		String Cart= driver.findElement(By.id("com.androidsample.generalstore:id/totalAmountLbl")).getText().substring(1).trim();
 		Double FinalCart= Double.parseDouble(Cart);
-		Assert.assertEquals(FinalCart, FinalAmount);
+		AssertJUnit.assertEquals(FinalCart, FinalAmount);
 		
 		WebElement element =driver.findElement(By.id("com.androidsample.generalstore:id/termsButton"));
-		longpressaction(element);
+		gesture.longpressaction(element);
 		
 		driver.findElement(By.id("com.androidsample.generalstore:id/alertTitle")).isDisplayed();
 		driver.findElement(By.id("android:id/button1")).click();
