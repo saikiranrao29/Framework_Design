@@ -10,7 +10,6 @@ public class UDC_Streams_Login extends PO_Streams_Android{
 	}
 	
 	public void login(String username,String password) {
-		
 		tapOnWelcomeGotIt();
 		enterUserName(username);
 		enterPassWord(password);

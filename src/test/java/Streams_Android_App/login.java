@@ -11,15 +11,11 @@ import java.net.URISyntaxException;
 public class login extends BaseTests.Android_BaseTest{
 	
 @Test(dataProvider = "logincredentials")
-	public void logIntoStreams(String userName, String password) throws MalformedURLException, URISyntaxException {
+	public void logIntoStreams(String username, String password) throws MalformedURLException, URISyntaxException {
 		
 		InstallApplication();
 		UDC_Streams_Login loginPage=new UDC_Streams_Login(driver);
-		loginPage.tapOnWelcomeGotIt();
-		loginPage.enterUserName(userName);
-		loginPage.enterPassWord(password);
-		loginPage.TapOnSignIn();
-		
+		loginPage.login(username, password);
 	}
 
 	@DataProvider

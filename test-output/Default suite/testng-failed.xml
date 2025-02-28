@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="API_Demos_App.eCommerse_tc_1">
+      <class name="Streams_Android_App.login">
         <methods>
-          <include name="addToCart"/>
+          <include name="logIntoStreams" invocation-numbers="0"/>
         </methods>
-      </class> <!-- API_Demos_App.eCommerse_tc_1 -->
+      </class> <!-- Streams_Android_App.login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
