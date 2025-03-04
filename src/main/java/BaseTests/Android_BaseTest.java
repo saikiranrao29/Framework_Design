@@ -5,7 +5,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.Duration;
 
-import Utils.Android_GestureActions;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
@@ -27,14 +26,14 @@ public void InstallApplication() throws MalformedURLException, URISyntaxExceptio
 		options.setAvd("Pixel9Pro");
 		options.setAvdLaunchTimeout(Duration.ofSeconds(120));
 
-		options.setApp("/Users/saikiran_rao/git/AppiumPractice/src/test/java/resourses/General_Store.apk");
-		//options.setApp("C:\\Users\\Saikiran\\eclipse-workspace\\Streams\\src\\test\\java\\resourses\\Streams_Android_Production.apk");
-		//options.setApp("/Users/saikiran_rao/git/AppiumPractice/src/test/java/resourses/Streams_Android_Production.apk");
+		//options.setApp("/Users/saikiran_rao/git/AppiumPractice/src/test/java/resourses/General_Store.apk");
+		options.setApp("/Users/saikiran_rao/git/AppiumPractice/src/test/java/resourses/Streams_Android_Production.apk");
 		//options.setApp("/Users/saikiran_rao/git/AppiumPractice/src/test/java/resourses/ApiDemos_debug.apk");
+		//options.setApp("C:\\Users\\Saikiran\\eclipse-workspace\\Streams\\src\\test\\java\\resourses\\Streams_Android_Production.apk");
 		
 		options.setChromedriverExecutable("D:\\chromedriver-win64\\chromedriver.exe");
-		//options.setAppPackage("com.panterra.mobile.streams");
-		//options.setAppActivity("com.panterra.mobile.streams.MainActivity");
+		options.setAppPackage("com.panterra.mobile.streams");
+		options.setAppActivity("com.panterra.mobile.streams.MainActivity");
 		
 		//Set Android Driver to Install the Application (URL,Capabilities)
 		driver =new AndroidDriver(new URI("http://127.0.0.1:4723/").toURL(),options);

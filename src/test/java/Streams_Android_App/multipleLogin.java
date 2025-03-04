@@ -11,6 +11,8 @@ import UDC_Android_UserDefinedClasses.UDC_Streams_Login;
 
 public class multipleLogin extends Android_BaseTest{
 	
+	//login with multiple test data by dataprovider in the same class
+	
 	@Test (dataProvider = "getData")
 	public void FillForm(String username,String password) throws MalformedURLException, URISyntaxException, InterruptedException {
 		

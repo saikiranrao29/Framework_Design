@@ -10,6 +10,8 @@ import java.net.URISyntaxException;
 
 public class login extends BaseTests.Android_BaseTest{
 	
+	//login with data provider annotation from the same class
+	
 @Test(dataProvider = "logincredentials")
 	public void logIntoStreams(String username, String password) throws MalformedURLException, URISyntaxException {
 		

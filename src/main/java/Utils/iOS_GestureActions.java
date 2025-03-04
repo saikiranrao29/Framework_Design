@@ -16,13 +16,17 @@ import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.ios.IOSDriver;
 
-public class iOS_GestureActions  extends AppiumUtils{
-
-	public iOS_GestureActions(AppiumDriver driver) {
-		super(driver);
+public class iOS_GestureActions extends AppiumUtils{
+	
+	IOSDriver driver;
+	public iOS_GestureActions(IOSDriver driver) {
+		this.driver=driver;
 	
 	}
+	
+	
 	@Test
 	public  void iOSLongPress(WebElement longPressElement) throws MalformedURLException, URISyntaxException, InterruptedException {
 			

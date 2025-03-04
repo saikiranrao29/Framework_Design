@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
+import org.testng.annotations.Test;
 
 import com.google.common.collect.ImmutableMap;
 
@@ -14,13 +15,13 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class Android_GestureActions extends AppiumUtils{
 	
-	//<<<<--------------------------Long Press----------------------------------------------------------------->>>
+		AndroidDriver driver;
 	
-		public Android_GestureActions(AppiumDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-	}
-
+		public Android_GestureActions(AndroidDriver driver) {
+		this.driver=driver;
+			}
+		//<<<<--------------------------Long Press----------------------------------------------------------------->>>
+		@Test
 		public  void longpressaction(WebElement longpress) {
 			
 			driver.executeScript("mobile: longClickGesture", 
@@ -28,6 +29,7 @@ public class Android_GestureActions extends AppiumUtils{
 		}
 		
 	//<<<<--------------------------Scroll to Text------------------------------------------------------------->>>
+		@Test
 		public  void scrolltotext(String stext) {
 			
 			//I)By androidUIAutomator //Will Use When Where you know the exact location to scroll
@@ -39,6 +41,7 @@ public class Android_GestureActions extends AppiumUtils{
 		}
 
 	//<<<<--------------------------Scroll to Element------------------------------------------------------------->>>		
+		@Test
 		public void scrolluntilelement(WebElement element) throws InterruptedException {
 			//II)By JavaScript Executor //Will Use only till your element found/till your co-ordinates //will use when that element is still exists or not 
 			// need to keep on check if that element is exists or not 
@@ -67,6 +70,7 @@ public class Android_GestureActions extends AppiumUtils{
 			}	
 		}
 //<<<<--------------------------Swipe Action------------------------------------------------------------->>>	
+		@Test
 		public void swipeleft(String swipeDirection,WebElement firstImage){
 			// Swipe
 			((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
@@ -77,6 +81,7 @@ public class Android_GestureActions extends AppiumUtils{
 		}
 		
 //<<<<---------------------------Drag Drop--------------------------------------------------------------->>>	
+		
 		public void DragDrop(WebElement dragElement,int dropX,int dropY) {
 			
 			driver.executeScript("mobile: dragGesture", ImmutableMap.of(

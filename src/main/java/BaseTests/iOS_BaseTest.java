@@ -8,8 +8,6 @@ import java.time.Duration;
 import java.util.Map;
 import org.testng.annotations.Test;
 
-import Utils.iOS_GestureActions;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.service.local.AppiumDriverLocalService;

@@ -4,23 +4,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import Utils.iOS_GestureActions;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class OR_iOS_Streams extends iOS_GestureActions{
 	
-	public OR_iOS_Streams(AppiumDriver driver) {
+public IOSDriver driver;
+public OR_iOS_Streams(IOSDriver driver) {
 		super(driver);
-	}
-
-	public IOSDriver driver;
-	
-	public void FormPage_Android(IOSDriver driver) {
-		//super(driver);
 		this.driver=driver;
-		PageFactory.initElements(new AppiumFieldDecorator(driver),this);	
+		PageFactory.initElements(new AppiumFieldDecorator(driver),this);
 	}
 	
 	@iOSXCUITFindBy(id="sai/test")
