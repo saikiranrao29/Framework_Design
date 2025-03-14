@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Streams_Android_App.loginWithJasonTestData">
+      <class name="TestReport.loginReport">
         <methods>
-          <include name="FillForm" invocation-numbers="0 1 2"/>
+          <include name="logout"/>
         </methods>
-      </class> <!-- Streams_Android_App.loginWithJasonTestData -->
+      </class> <!-- TestReport.loginReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

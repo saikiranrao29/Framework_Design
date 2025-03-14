@@ -1,12 +1,12 @@
 package Streams_Android_App;
 
-import java.net.MalformedURLException;
+import java.io.IOException;
 import java.net.URISyntaxException;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import BaseTests.Android_BaseTest;
+import TestUtils.Android_BaseTest;
 import UDC_Android_UserDefinedClasses.UDC_Streams_Login;
 
 public class multipleLogin extends Android_BaseTest{
@@ -14,7 +14,7 @@ public class multipleLogin extends Android_BaseTest{
 	//login with multiple test data by dataprovider in the same class
 	
 	@Test (dataProvider = "getData")
-	public void FillForm(String username,String password) throws MalformedURLException, URISyntaxException, InterruptedException {
+	public void FillForm(String username,String password) throws URISyntaxException, InterruptedException, IOException {
 		
 		InstallApplication();
 		UDC_Streams_Login UDC= new UDC_Streams_Login(driver);

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="LoginApp-LogoutApp(failed)">
     <classes>
-      <class name="Streams_Android_App.loginWithJasonTestData">
+      <class name="TestReport.loginReport">
         <methods>
-          <include name="FillForm" invocation-numbers="0 1 2"/>
+          <include name="logout"/>
         </methods>
-      </class> <!-- Streams_Android_App.loginWithJasonTestData -->
+      </class> <!-- TestReport.loginReport -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- LoginApp-LogoutApp(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,16 +1,16 @@
 package Streams_Android_App;
 
-import java.net.MalformedURLException;
+import java.io.IOException;
 import java.net.URISyntaxException;
 
 import org.testng.annotations.DataProvider;
 
-import BaseTests.Android_BaseTest;
+import TestUtils.Android_BaseTest;
 import UDC_Android_UserDefinedClasses.UDC_Streams_Login;
 
 public class dataProvider extends Android_BaseTest{
 	
-		public void loginWithData(String username,String password) throws MalformedURLException, URISyntaxException, InterruptedException {
+		public void loginWithData(String username,String password) throws URISyntaxException, InterruptedException, IOException {
 			InstallApplication();
 			UDC_Streams_Login UDC= new UDC_Streams_Login(driver);
 			UDC.login(username,password);

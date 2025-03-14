@@ -1,12 +1,12 @@
 package API_Demos_App;
 
-import java.net.MalformedURLException;
+import java.io.IOException;
 import java.net.URISyntaxException;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import BaseTests.Android_BaseTest;
+import TestUtils.Android_BaseTest;
 import UDC_Android_UserDefinedClasses.UDC_API_Demos_Android;
 
 //General Store E-Commerse Application
@@ -14,7 +14,7 @@ import UDC_Android_UserDefinedClasses.UDC_API_Demos_Android;
 public class eCommerse_tc_1 extends Android_BaseTest{
 	
 	@Test (dataProvider = "APIDemoTestData")
-	public void addToCart(String stext,String Name,String typeOfGender) throws MalformedURLException, URISyntaxException {
+	public void addToCart(String stext,String Name,String typeOfGender) throws URISyntaxException, IOException {
 		
 		InstallApplication();
 		UDC_API_Demos_Android UDC= new UDC_API_Demos_Android(driver);

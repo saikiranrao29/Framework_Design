@@ -5,18 +5,18 @@ import org.testng.annotations.Test;
 
 import UDC_Android_UserDefinedClasses.UDC_Streams_Login;
 
-import java.net.MalformedURLException;
+import java.io.IOException;
 import java.net.URISyntaxException;
 
-public class login extends BaseTests.Android_BaseTest{
-	
+public class login extends TestUtils.Android_BaseTest{
+	UDC_Streams_Login loginPage;
 	//login with data provider annotation from the same class
 	
 @Test(dataProvider = "logincredentials")
-	public void logIntoStreams(String username, String password) throws MalformedURLException, URISyntaxException {
+	public void logIntoStreams(String username, String password) throws URISyntaxException, IOException {
 		
 		InstallApplication();
-		UDC_Streams_Login loginPage=new UDC_Streams_Login(driver);
+		loginPage=new UDC_Streams_Login(driver);
 		loginPage.login(username, password);
 	}
 
@@ -24,7 +24,11 @@ public class login extends BaseTests.Android_BaseTest{
 	public Object[][] logincredentials() {
 		
 		return new Object[] [] {
-			{"saikiranone@dcwvalidation","abc@1234"}
+			{"saikiransix@dcwvalidation","sai@1234"}
 								};
+	}
+	@Test 
+	public void logoutfromApp() {
+		loginPage.logout();
 	}
 }

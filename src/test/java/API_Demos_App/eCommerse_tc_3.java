@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 
-public class eCommerse_tc_3 extends BaseTests.Android_BaseTest{
+public class eCommerse_tc_3 extends TestUtils.Android_BaseTest{
 	@Test
 	public static void productPrice() throws InterruptedException {
 		
